@@ -36,6 +36,10 @@ Foi feita uma cópia do arquivo editado de configuração do Squid, que se encon
 
     acl ip_do_dono src 192.168.0.100
     http_access allow ip_do_dono bloqueados
+
+    # Bloqueio de domínios HTTP para os demais, para HTTPS precisaria de SSL bump
+    # https://wiki.squid-cache.org/Features/SslBump
+    http_access deny bloqueados
 ``` 
 
 2. Exercício 2
