@@ -57,8 +57,8 @@ Foi feita uma cópia do arquivo editado de configuração do Squid, que se encon
     acl terraviva_liberada dstdomain .terraviva.com.br
     http_access allow terraviva_liberada
 
-    acl terra_bloq url_regex -i ^http://([^/]*\.)*terra[^/]*\.
-    http_access deny terra_bloq
+    acl terra_bloq url_regex -i terra
+    http_access deny terra_bloq !terraviva_liberada
 ```
 
 ----
